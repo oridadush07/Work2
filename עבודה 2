@@ -1,0 +1,249 @@
+Targil 1:
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        HelloWorld ex = new HelloWorld();
+        ex.f1();
+    }
+    public void f1() {
+        Scanner scan = new Scanner(System.in);
+        int sum = 0;
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Enter your grade  " + i + ": ");
+            int grade = scan.nextInt();
+            sum = sum + grade;
+        }
+        int avg = sum / 5;
+        System.out.println("Average grade: " + avg);
+    }
+}
+
+Targil 2:
+import java.util.Scanner;
+class HelloWorld 
+{
+    public void Targil2()
+    {
+        int count = 0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter a word");
+        String word = scan.nextLine();
+        while( !word.equals ("enter") )
+        {
+            count = count + 1;
+            System.out.println("Enter a word");
+            word = scan.nextLine();
+        }
+        count = count + 1;
+        System.out.println(count);
+    }
+    public static void main(String[] args) 
+    {
+        HelloWorld ex2 = new HelloWorld();
+        ex2.Targil2();
+    }
+}
+
+
+Targil 3:
+public void f3(int code) 
+    {
+        Scanner scan = new Scanner(System.in);
+        int num = 0;
+
+        do
+        {
+            System.out.println("Please enter the code:");
+            int inputCode = scan.nextInt();
+
+            if (code == inputCode) 
+            {
+                System.out.println("How much money");
+                break;
+            } 
+            else 
+            {
+                System.out.println("Error");
+                num += 1;
+            }
+        } while (num < 3);
+
+        if (num == 3) 
+        {
+            System.out.println("Maximum attempts reached. Access denied.");
+        }
+    }
+
+Targil 4:
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string ");
+        String str = scanner.next();
+        f4(str);
+    }
+
+    public static void f4(String str) {
+        int length = str.length();
+        boolean isPalindrome = true;
+
+        for (int i = 0; i < length / 2; i++) {
+            if (str.charAt(i) != str.charAt(length - 1 - i)) {
+                isPalindrome = false;
+                break;
+            }
+        }
+
+        if (isPalindrome) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a palindrome");
+        }
+    }
+}
+
+Targil 5:
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter a number: ");
+        int num=scan.nextInt();
+        f5(num);
+    }
+    public static void f5(int num)
+    {
+         for (int i = 1; i <= num; i++) 
+        {
+            if(num%i==0)
+            {
+                System.out.println(i+",");
+            }
+        }
+    }
+}
+
+
+Targil 6:
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+         HelloWorld.f6(); 
+        
+    }
+    public static void f6()
+    {
+        for (int i = 1; i <= 10; i++) 
+        {
+            for(int j =1; j<=10; j++)
+            {
+                System.out.print(i * j + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+}
+
+Targil 7:
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        f7();
+    }
+
+    public static void f7() {
+        Scanner scanner = new Scanner(System.in);
+        
+        int minGrade = 0;
+        int maxGrade = 0;
+
+        for (int i = 1; i <= 7; i++) {
+            System.out.print("Enter grade number" + i + ": ");
+            int grade = scanner.nextInt();
+            if (grade < minGrade) 
+            {
+                minGrade = grade;
+            }
+
+            if (grade > maxGrade) 
+            {
+                maxGrade = grade;
+            }
+        }
+
+        System.out.println("minimum grade: " + minGrade);
+        System.out.println("maximum grade: " + maxGrade);
+        
+    }
+}
+
+Targil 8:
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num = scanner.nextInt();
+        System.out.println(f8(num));
+    }
+
+    public static boolean f8(int num) {
+        int a = 0, b = 1;
+        while (b <= num) {
+            if (b == num) {
+                return true;
+            }
+            int temp = a + b;
+            a = b;
+            b = temp;
+        }
+        return false;
+    }
+}
+
+Targil 9:
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num1 = scanner.nextInt();
+        System.out.println("Enter another number: ");
+        int num2 = scanner.nextInt();
+        f9(num1, num2);
+    }
+
+    public static void f9(int num1, int num2) {
+        int result = 0;
+        for (int i = 0; i < num1; i++) {
+            result += num2;
+        }
+        System.out.println("Multiplication without using  operator: " + result);
+    }
+}
+
+Targil 10:
+class HelloWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int high = scanner.nextInt();
+        f10(high);
+    }
+
+    public static void f10(int high) {
+        for (int i = 1; i <= high; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
